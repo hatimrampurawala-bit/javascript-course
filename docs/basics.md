@@ -40,7 +40,7 @@ let accountState;
 - **symbol** - unique
 - **object**
 
-## conversion in JavaScript
+## conversion and operation in JavaScript
 
 **Datatypes** can be converted into other data types in JS. the syntax is as follows
 
@@ -52,8 +52,70 @@ let stringNumber = String(someNumber)
 
 we defined a variable as **someNumber** and gave it a value of *33* which is a **Number** datatype. later in the second line we defined another variable as **stringNumber** and that variable stores the converted data type, which in this case we converted Number to => **String**
 
-### Syntax
+#### Syntax
 
 ```txt
 <defineVariable> <newVariable> = <dataTypeConversion>(<value>)
 ```
+
+### String to Number conversion
+
+#### Converting to Negative datatypes
+
+```Js
+let value = 3
+let negValue = -value
+```
+we simply assign a **Negative (-)** to the variable
+
+#### Common Operations
+
+```Js
+console.log(2 + 2);  // addition
+console.log(2 - 2);  // substraction
+console.log(2 * 2);  // multiplication
+console.log(2 ** 3); // power
+console.log(2 / 2);  // division
+console.log(2 % 3);  // modulus or remainder
+```
+
+#### Adding strings together
+
+variables or different datatypes can be added using operators in Javascript
+
+eg:
+```Js
+let str1 = "hello"
+let str2 = " hatim"
+
+let str3 = str1 + str2 // output => hello hatim
+```
+#### Adding different datatypes together
+
+adding different types of datatypes can give some intresting results
+
+eg:
+```Js
+console.log("1" + 2); // output => 12
+console.log(1 + "2"); // output => 12
+console.log("1" + 2 + 2); // output => 122
+console.log(1 + 2 + "2"); // output => 32
+```
+#### operations on boolean data
+
+a **Plus (+)** can used with boolean data types like *true* OR *false* where the plus represents increment in the data and *true = 1* and *false = 0*
+
+eg:
+```Js
+console.log(+true); // output => 1
+console.log(+""); // output => 0
+```
+#### Prefix and Postfix operations and Syntax
+
+```Js
+let gameCounter = 100
+gameCounter++; // postfix => value increases after usage
+++gameCounter; // prefix => value increases before usage
+console.log(gameCounter);
+```
+there is behaviour changes with using **prefix** or **postfix** for more detail read [Increment (++) mdm_resources](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)

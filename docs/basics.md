@@ -39,3 +39,21 @@ let accountState;
 - **undefined** - Datetype not defined
 - **symbol** - unique
 - **object**
+
+## conversion in JavaScript
+
+**Datatypes** can be converted into other data types in JS. the syntax is as follows
+
+```Js
+let someNumber = 33
+let stringNumber = String(someNumber)
+```
+### explanation
+
+we defined a variable as **someNumber** and gave it a value of *33* which is a **Number** datatype. later in the second line we defined another variable as **stringNumber** and that variable stores the converted data type, which in this case we converted Number to => **String**
+
+### Syntax
+
+```txt
+<defineVariable> <newVariable> = <dataTypeConversion>(<value>)
+```

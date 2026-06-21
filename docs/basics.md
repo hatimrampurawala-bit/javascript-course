@@ -119,3 +119,92 @@ gameCounter++; // postfix => value increases after usage
 console.log(gameCounter);
 ```
 there is behaviour changes with using **prefix** or **postfix** for more detail read [Increment (++) mdm_resources](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+
+## Comparision in Javascript
+
+conversion operations are used to compare same or different datatypes with one another.
+
+### common comparisions
+all the data is of the type: **number**
+
+```JS
+console.log(2 > 1);
+console.log(2 >= 1);
+console.log(2 < 1);
+console.log(2 == 1);
+console.log(2 != 1);
+```
+### comparing different datatypes
+a **string** can be compared with a **number** Javascript with automatically convert that datatype in its most suitable format.
+
+```Js
+console.log("2" > 1);
+console.log("02" > 1);
+```
+### Null and undefined comparisions
+conversion of the above type are confusing and should be avoided due to uncertainity in the output
+
+```Js
+console.log(null > 0);
+console.log(null == 0);
+console.log(null >= 0);
+
+console.log(undefined == 0);
+console.log(undefined > 0);
+console.log(undefined < 0);
+```
+***Note***: The reason for unexpected result is that an equality check "==" and comparisons "> < >= <=" work differently.
+comparisons convert null to a number, treating it as 0.
+that's why (3) null >=0 is true and (1) null >0 is false.
+
+## Memory in Js
+In Javascript there are two different types of memory
+1. **Stack Memory**
+2. **Heap Memory**
+
+### 1. Stack Memory
+Stack memory is used for primitive datatypes 
+check [[datatypes.md]] for detailed information on different datatypes
+
+Stack memory => provides you with a copy of your variable
+
+Eg:
+```Js
+let myYoutubeName = "hatimdotcom"
+
+let anotherName = myYoutubeName
+anotherName = "guddudotcom"
+
+console.log(anotherName);
+console.log(anotherName);
+```
+Output:
+```txt
+guddudotcom
+guddudotcom
+```
+
+### 2. Heap Memory
+Heap memory is used for non primitive datatypes
+
+Heap memory => provides reference of the original value. changes made here will be reflected in the original value
+
+Eg:
+```Js
+let userOne = {
+  email: "hatim@google.com",
+  upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "guddu@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+```
+Output:
+```txt
+guddu@google.com
+guddu@google.com
+```

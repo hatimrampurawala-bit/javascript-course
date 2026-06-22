@@ -208,3 +208,47 @@ Output:
 guddu@google.com
 guddu@google.com
 ```
+## Strings, Numbers and Math
+Strings hold words or letters in them they are usually used with singlequote '' or doublequote ""
+
+specific orperators can been applied on top of a string output such as concatination, trim, proto, uppercase, index, charAt, replace, include etc.
+
+to read more about Strings check this resource
+: [Mdn Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+
+### Numbers and Math
+similar to strings Numbers can also be modified or manipulated using some operators.
+
+Eg:
+```Js
+console.log(Math);
+console.log(Math.abs(4));
+console.log(Math.round(4.6));
+console.log(Math.ceil(4.2));
+console.log(Math.floor(4.6));
+console.log(Math.min(4, 3, 6, 8));
+console.log(Math.max(4, 3, 6, 8));
+```
+output:
+```txt
+4
+5
+5
+4
+3
+8
+```
+**Note**
+generating random numbers with specific paraments is a bit tricky eg:
+
+```Js
+const min = 10
+const max = 20
+
+console.log(Math.floor(Math.random() * (max - min + 1)) + min)
+```
+in the above example we defined a min and max value and asked the function to choose a random value between them.
+
+- Max - min => to set the range
+- +1 => to avoid a zero case
+- '+ min => so that the output is in INT (11, 12, 19) and not float (11.023565, 12.336, 19.26568). this forces the minimum value to be atleat 11 or above.
